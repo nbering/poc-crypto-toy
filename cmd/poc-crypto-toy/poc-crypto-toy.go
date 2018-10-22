@@ -1,11 +1,21 @@
 package main
 
 import (
-	"fmt"
+	"context"
+	"flag"
 	"os"
+
+	"github.com/google/subcommands"
+	"github.com/nbering/poc-crypto-toy/internal/app/poc-crypto-toy/commands"
 )
 
 func main() {
-	fmt.Fprintf(os.Stderr, "Command not yet implemented.\n")
-	os.Exit(1)
+	subcommands.Register(subcommands.HelpCommand(), "")
+	subcommands.Register(subcommands.FlagsCommand(), "")
+	subcommands.Register(subcommands.CommandsCommand(), "")
+	subcommands.Register(&commands.TestCmd{}, "")
+
+	flag.Parse()
+	ctx := context.Background()
+	os.Exit(int(subcommands.Execute(ctx)))
 }
