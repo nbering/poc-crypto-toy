@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "1T62vFAnwkoXkdtumsUAX0bWJX4=",
+			"path": "github.com/google/subcommands",
+			"revision": "46f0354f63152e8801bb460d26f5b6c4c878efbb",
+			"revisionTime": "2018-10-12T22:53:30Z"
+		}
+	],
+	"rootPath": "github.com/nbering/poc-crypto-toy"
+}
